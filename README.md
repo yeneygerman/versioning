@@ -8,7 +8,7 @@ C# console application
 netcoreapp2.1
 
 # Command line arguments
--file <filepath> -version <version to be searched> -incrementtype <increment type>
+-file "filepath" -version "version to be searched" -incrementtype "increment type"
 
 # Filepath argument
 Filepath argument is the target file to increment the version.
