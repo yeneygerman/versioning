@@ -1,0 +1,60 @@
+steps:
+
+# Kubernetes Engine deployment start
+
+# step 0
+# This step builds the container image.
+- name: 'gcr.io/cloud-builders/docker'
+  id: Build
+  args:
+  - 'build'
+  - '-t'
+  - 'gcr.io/$PROJECT_ID/project-service:live-1-1-1'
+  - '.'
+  dir: /workspace/SampleProject/
+
+# step 1
+# This step pushes the image to Container Registry.
+# The PROJECT_ID and _VERSION variables are automatically.
+# replaced by Cloud Build.
+- name: 'gcr.io/cloud-builders/docker'
+  id: Push
+  args:
+  - 'push'
+  - 'gcr.io/$PROJECT_ID/project-service:live-1-1-1'
+
+# step 2
+# Use image tag or URI variables in deployment file and substituting them with sed during build-time.
+- id: Set
+  name: ubuntu
+  args: ['bash','-c','sed -i "s,INIT_IMAGE_NAME,gcr.io/$PROJECT_ID/project-service:live-1-1-1," /workspace/SampleProject/k8s/deployment.yaml']
+
+# step 3
+# This steps applies the deployment and ingress yaml files.
+- name: 'gcr.io/cloud-builders/kubectl'
+  id: Apply
+  args: ['apply', '-f', '/workspace/SampleProject/k8s/']
+  env:
+  - 'CLOUDSDK_COMPUTE_ZONE=australia-southeast1-a'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=productioncluster'
+
+# step 4
+# This steps deploys the latest image built.
+- name: 'gcr.io/cloud-builders/kubectl'
+  id: Deploy
+  env:
+  - 'CLOUDSDK_COMPUTE_ZONE=australia-southeast1-a'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=productioncluster'
+  args: [
+   'set', 
+   'image', 
+   'deployment', 
+   'project-service', 
+   'project-service=gcr.io/$PROJECT_ID/project-service:live-1-1-1'
+  ]
+# push images to Google Container Registry with tags
+images: [
+   'gcr.io/$PROJECT_ID/project-service:live-1-1-1'
+  ]
+
+# Kubernetes Engine deployment complete
