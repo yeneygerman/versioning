@@ -17,9 +17,3 @@ Filepath argument is the target file to increment the version.
 Major
 Minor
 Patch
-
-# Target Exec Command for AfterPublish sample
-This sample is with assumption that the project is under the same working directory as the increment version exe file.
-"<Target Name="CustomActionsAfterPublish" AfterTargets="AfterPublish">
- <Exec WorkingDirectory="D:\SamplePath" Command="increment-version.exe -file SampleProject\cloudbuild.yaml -version project-service:live- -incrementtype patch"></Exec>
-</Target>"
