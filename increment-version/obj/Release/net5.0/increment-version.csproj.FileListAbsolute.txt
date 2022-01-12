@@ -1,0 +1,16 @@
+D:\yengerman-github\versioning\increment-version\bin\Release\net5.0\increment-version.exe
+D:\yengerman-github\versioning\increment-version\bin\Release\net5.0\increment-version.deps.json
+D:\yengerman-github\versioning\increment-version\bin\Release\net5.0\increment-version.runtimeconfig.json
+D:\yengerman-github\versioning\increment-version\bin\Release\net5.0\increment-version.runtimeconfig.dev.json
+D:\yengerman-github\versioning\increment-version\bin\Release\net5.0\increment-version.dll
+D:\yengerman-github\versioning\increment-version\bin\Release\net5.0\ref\increment-version.dll
+D:\yengerman-github\versioning\increment-version\bin\Release\net5.0\increment-version.pdb
+D:\yengerman-github\versioning\increment-version\obj\Release\net5.0\increment-version.csproj.AssemblyReference.cache
+D:\yengerman-github\versioning\increment-version\obj\Release\net5.0\increment-version.GeneratedMSBuildEditorConfig.editorconfig
+D:\yengerman-github\versioning\increment-version\obj\Release\net5.0\increment-version.AssemblyInfoInputs.cache
+D:\yengerman-github\versioning\increment-version\obj\Release\net5.0\increment-version.AssemblyInfo.cs
+D:\yengerman-github\versioning\increment-version\obj\Release\net5.0\increment-version.csproj.CoreCompileInputs.cache
+D:\yengerman-github\versioning\increment-version\obj\Release\net5.0\increment-version.dll
+D:\yengerman-github\versioning\increment-version\obj\Release\net5.0\ref\increment-version.dll
+D:\yengerman-github\versioning\increment-version\obj\Release\net5.0\increment-version.pdb
+D:\yengerman-github\versioning\increment-version\obj\Release\net5.0\increment-version.genruntimeconfig.cache

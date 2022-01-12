@@ -1,0 +1,5 @@
+D:\yengerman-github\versioning\increment-version\Exe\increment-version.exe
+D:\yengerman-github\versioning\increment-version\Exe\increment-version.dll
+D:\yengerman-github\versioning\increment-version\Exe\increment-version.deps.json
+D:\yengerman-github\versioning\increment-version\Exe\increment-version.runtimeconfig.json
+D:\yengerman-github\versioning\increment-version\Exe\increment-version.pdb

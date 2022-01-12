@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = increment_version
+build_property.ProjectDir = D:\yengerman-github\versioning\increment-version\
